@@ -1,0 +1,128 @@
+/* src/HeroSection.css */
+.hero-section {
+  padding-bottom: 2rem;
+  position: relative;
+  padding-top: 90px;
+}
+.hero {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.hero-info {
+  width: 45%;
+  display: flex;
+  align-items: flex-start;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.hero-badges {
+  display: flex;
+  gap: 1rem;
+  margin-bottom: 1rem;
+  background-color: #ffffff7a;
+  padding: 1.25rem 1rem;
+  border-radius: 1rem;
+}
+
+.badge {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 4px;
+  border-radius: 9999px;
+  font-size: 0.875rem;
+  color: gray;
+}
+.hero-icon {
+  color: var(--main-color);
+}
+.hero-title {
+  font-size: 3rem;
+  color: black;
+  margin-bottom: 0.5rem;
+  font-weight: 400;
+}
+
+.highlight {
+  color: var(--main-color);
+  font-weight: 800;
+}
+
+.hero-subtitle {
+  font-size: 1.125rem;
+  color: #5b5b5b;
+  margin-bottom: 2rem;
+}
+
+.hero-buttons {
+  display: flex;
+  gap: 0.5rem;
+}
+
+.watch-button {
+  background-color: transparent;
+  color: var(--main-color);
+  border: none;
+  padding: 0.75rem 1.5rem;
+
+  cursor: pointer;
+  font-size: 1rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+}
+
+.watch-icon {
+  color: red;
+  font-size: 24px;
+}
+.hero-images {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 40%;
+  margin-top: 64px;
+}
+.hero-images img {
+  width: 100%;
+}
+.rightImage {
+  position: absolute;
+  bottom: -140px;
+  right: 0;
+  width: 100px;
+  height: 300px;
+}
+
+.leftanation {
+  animation: leftanationk 0.5s ease-in-out;
+}
+@keyframes leftanationk {
+  0% {
+    opacity: 0.5;
+    transform: translatex(-100px);
+  }
+
+  100% {
+    opacity: 1;
+    transform: translatex(0);
+  }
+}
+
+.rightanation {
+  animation: rightanationk 0.5s ease-in-out;
+}
+@keyframes rightanationk {
+  0% {
+    opacity: 0.5;
+    transform: translatex(100px);
+  }
+
+  100% {
+    opacity: 1;
+    transform: translatex(0);
+  }
+}

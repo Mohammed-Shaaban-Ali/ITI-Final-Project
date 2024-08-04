@@ -1,0 +1,265 @@
+.store-container {
+  /* width: 90%; */
+  margin: 80px 64px;
+}
+.store-content {
+  display: flex;
+  gap: 32px;
+}
+.filter {
+  width: 25%;
+}
+.filter-section {
+  background-color: #f9f9f9ad;
+  padding: 0 32px;
+  margin-top: 32px;
+  border-radius: 5px;
+}
+
+.filter-title {
+  font-weight: bold;
+  font-size: 1.6rem;
+  color: var(--main-color);
+}
+
+.filter-group {
+  margin-bottom: 15px;
+}
+
+.filter-group h3 {
+  font-size: 20px;
+  margin-left: -16px;
+  margin-bottom: 10px;
+}
+
+.filter-item {
+  display: flex;
+  align-items: center;
+  margin-bottom: 5px;
+}
+
+.filter-item input[type="checkbox"] {
+  margin-right: 10px;
+}
+
+.price-inputs {
+  display: flex;
+  gap: 10px;
+}
+
+.price-inputs input {
+  width: 50%;
+  padding: 5px;
+  border: 1px solid #ccc;
+  border-radius: 3px;
+}
+
+.products-section {
+  width: 75%;
+}
+
+.products-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 15px;
+}
+.products-header h2 {
+  font-weight: bold;
+  font-size: 1.6rem;
+  color: var(--main-color);
+  margin-bottom: 16px;
+}
+.products-header h2 span {
+  font-weight: 500;
+  font-size: 14px;
+  color: gray;
+}
+.products-header select {
+  padding: 5px;
+  border: 1px solid #ccc;
+  border-radius: 3px;
+}
+
+.products-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
+  gap: 20px;
+}
+
+.product-card {
+  border: 1px solid #cccccc44;
+  border-radius: 5px;
+  padding: 10px;
+  text-align: center;
+  box-shadow: -1px -1px 16px 1px #f1f1f1;
+  position: relative;
+  overflow: hidden;
+  transition: all 0.3s ease;
+}
+.product-card:hover {
+  transform: scale(1.04);
+  cursor: pointer;
+}
+
+.product-card img {
+  width: 100%;
+  height: 200px;
+  object-fit: cover;
+  margin-bottom: 10px;
+  border-radius: 8px;
+}
+
+.product-card h3 {
+  font-size: 16px;
+  font-weight: 700;
+  margin-bottom: 10px;
+  text-align: left;
+}
+.card-footer {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  flex-direction: column;
+  gap: 16px;
+}
+.line {
+  width: 2px;
+  height: 12px;
+  background-color: var(--main-color);
+}
+.card-content {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  flex-direction: column;
+  /* gap: 12px; */
+}
+.gene-age {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 12px;
+  color: #667479;
+  font-weight: 400;
+  gap: 12px;
+}
+.price {
+  font-size: 12px;
+  color: #667479;
+  /* font-weight: 400; */
+  margin-top: 10px;
+}
+.price strong {
+  font-size: 14px;
+  font-weight: 800;
+}
+.price span {
+  font-weight: 800;
+  color: var(--main-color);
+  margin-right: 4px;
+}
+.btns {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 12px;
+  width: 100%;
+  padding: 13px 0 8px;
+  border-top: 1px solid rgb(207, 207, 207);
+}
+.btns button,
+.btns a {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 8px;
+  color: white;
+  border: none;
+  border-radius: 3px;
+  cursor: pointer;
+  width: 100%;
+  height: 40px;
+  font-size: 18px;
+  opacity: 0.5;
+  transition: all 0.5s ease;
+}
+.btns button:hover,
+.btns a:hover {
+  opacity: 1;
+}
+.edit {
+  background-color: rgba(53, 186, 53);
+}
+.see {
+  background-color: var(--main-color);
+}
+.delete {
+  background-color: red;
+}
+.sale {
+  width: 8rem;
+  height: 2rem;
+  position: absolute;
+  top: 1rem;
+  right: -2rem;
+  z-index: 100;
+}
+.out-Of-stock,
+.in-Stock {
+  height: 100%;
+  font-size: 12px;
+  width: 100%;
+  color: white;
+  text-align: center;
+  line-height: 2rem;
+  font-weight: 600;
+  transform: rotate(45deg);
+}
+.out-Of-stock {
+  background-color: #cf0000;
+}
+.in-Stock {
+  background-color: #7ed00b;
+}
+.pagination {
+  display: flex;
+  justify-content: center;
+  gap: 16px;
+  align-items: center;
+  margin-top: 24px;
+  padding-top: 16px;
+  border-top: 1px solid #ccc;
+}
+
+.pagination button {
+  padding: 5px 10px;
+  border: 1px solid #ccc;
+  background-color: white;
+  cursor: pointer;
+}
+
+.pagination button.active {
+  background-color: var(--main-color);
+  color: white;
+}
+
+.pagination .view-all {
+  border: none;
+  background-color: transparent;
+  color: var(--main-color);
+}
+
+.topProuducts {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.addProduct-btn {
+  text-decoration: none;
+  background-color: rgb(31, 187, 31);
+  transition: all 0.5s ease;
+}
+.addProduct-btn:hover {
+  background-color: rgb(15, 151, 15);
+}

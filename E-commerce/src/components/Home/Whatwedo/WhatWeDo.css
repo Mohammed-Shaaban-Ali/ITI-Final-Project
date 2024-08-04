@@ -1,0 +1,64 @@
+.container-bander {
+  width: 1300px;
+  margin: 120px auto;
+}
+.container-bander img {
+  width: 100%;
+}
+
+.circle {
+  display: flex;
+}
+.circle:nth-child(1),
+.circle:nth-child(3) {
+  width: 400px;
+  height: 400px;
+}
+.whatWeDo {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 48px;
+  flex-direction: column;
+  background-color: white;
+  box-shadow: 1px 1px 8px #ccc;
+  padding: 3rem;
+  border-radius: 1rem;
+  margin-left: -100px;
+  height: fit-content;
+}
+.card1,
+.card2 {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 900px;
+  gap: 32px;
+}
+.card1 {
+  padding-bottom: 48px;
+  border-bottom: 1px solid #ccc;
+}
+.card-what {
+  display: flex;
+  align-items: center;
+  justify-self: center;
+  gap: 16px;
+  width: 45%;
+}
+.card-text {
+  display: flex;
+  align-items: flex-start;
+  justify-content: center;
+  flex-direction: column;
+  gap: 8px;
+}
+.card-what img {
+  width: 64px;
+  /* height: 24px; */
+}
+.card-what p {
+  color: #797979;
+  font-weight: 400;
+  font-size: 14px;
+}
