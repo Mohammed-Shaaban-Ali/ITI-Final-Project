@@ -35,6 +35,7 @@ const MainNavbar = () => {
         </button>
         <div className={`nav-links ${isMenuOpen ? "active" : ""}`}>
           <NavLink
+            onClick={() => setIsMenuOpen(false)}
             to="/"
             style={({ isActive }) => ({
               color: isActive ? "var(--main-color)" : "",
@@ -46,6 +47,7 @@ const MainNavbar = () => {
             Home
           </NavLink>
           <NavLink
+            onClick={() => setIsMenuOpen(false)}
             to="/products"
             style={({ isActive }) => ({
               color: isActive ? "var(--main-color)" : "",
@@ -57,6 +59,7 @@ const MainNavbar = () => {
             Products
           </NavLink>
           <NavLink
+            onClick={() => setIsMenuOpen(false)}
             to="/Contact"
             style={({ isActive }) => ({
               color: isActive ? "var(--main-color)" : "",

@@ -3,7 +3,11 @@ import axios from "axios";
 import toast from "react-hot-toast";
 import ProductCard from "./ProductCard";
 
-export default function ProductsList({ currentItems, RenderPageNumbers }) {
+export default function ProductsList({
+  currentItems,
+  RenderPageNumbers,
+  productRef,
+}) {
   // Handler to delete a product
   const handleDelete = useCallback((id) => {
     axios
@@ -17,7 +21,7 @@ export default function ProductsList({ currentItems, RenderPageNumbers }) {
       });
   }, []);
   return (
-    <div className="products-section">
+    <div className="products-section" ref={productRef}>
       <div className="products-header animation">
         <h2>
           Ankara styles <span>Male & Female</span>

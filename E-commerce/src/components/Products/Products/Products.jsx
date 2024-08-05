@@ -1,10 +1,18 @@
-import React, { useEffect, useState, useCallback } from "react";
+import React, {
+  useEffect,
+  useState,
+  useCallback,
+  lazy,
+  Suspense,
+  useRef,
+} from "react";
 import "./Products.css";
 
 import axios from "axios";
 import toast from "react-hot-toast";
 import ProductsFilter from "./ProductsFilter";
-import ProductsList from "./ProductsList";
+import LoadingPage from "../../../pages/LoadingPage";
+const ProductsList = lazy(() => import("./ProductsList"));
 
 const Products = () => {
   const [products, setProducts] = useState([]);
@@ -13,16 +21,17 @@ const Products = () => {
     ageGroup: { Adult: true, Children: true },
     price: { min: "", max: "" },
   });
-  const [currentPage, setCurrentPage] = useState(1);
-  const itemsPerPage = 8;
 
   // Fetch products from API
   useEffect(() => {
     const fetchProducts = async () => {
       try {
-        const response = await axios.get(`http://localhost:4000/products`);
+        const response = await axios.get(
+          `https://mohammed-shaaban-ali.github.io/ITI-Final-Project/Json%20Server/data.json`
+        );
         setProducts(response.data.reverse());
       } catch (error) {
+        console.log(error);
         toast.error("Failed to fetch products. Please try again.");
       }
     };
@@ -57,6 +66,9 @@ const Products = () => {
     );
   });
 
+  const [currentPage, setCurrentPage] = useState(1);
+  const itemsPerPage = 8;
+
   // Pagination logic
   const indexOfLastItem = currentPage * itemsPerPage;
   const indexOfFirstItem = indexOfLastItem - itemsPerPage;
@@ -64,10 +76,22 @@ const Products = () => {
     indexOfFirstItem,
     indexOfLastItem
   );
-  const totalPages = Math.ceil(filteredProducts.length / itemsPerPage);
+  let totalPages = Math.ceil(filteredProducts.length / itemsPerPage);
+
+  const productRef = useRef(null);
+
+  // Function to scroll to the product
+  const scrollToProduct = () => {
+    if (productRef.current) {
+      productRef.current.scrollIntoView({ behavior: "smooth" });
+    }
+  };
 
   // Pagination handler
-  const paginate = (pageNumber) => setCurrentPage(pageNumber);
+  const paginate = (pageNumber) => {
+    setCurrentPage(pageNumber);
+    scrollToProduct(); // Scroll to product after setting the page
+  };
 
   // Render page numbers with previous and next buttons
   const renderPageNumbers = useCallback(() => {
@@ -124,10 +148,14 @@ const Products = () => {
           handleFilterChange={handleFilterChange}
           handlePriceChange={handlePriceChange}
         />
-        <ProductsList
-          currentItems={currentItems}
-          RenderPageNumbers={renderPageNumbers}
-        />
+
+        <Suspense fallback={<LoadingPage />}>
+          <ProductsList
+            currentItems={currentItems}
+            RenderPageNumbers={renderPageNumbers}
+            productRef={productRef}
+          />
+        </Suspense>
       </div>
     </section>
   );
