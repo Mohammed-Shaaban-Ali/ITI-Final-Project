@@ -7,14 +7,11 @@ Welcome to "Fashion for All" - an inclusive e-commerce platform offering a wide 
 ## Table of Contents
 
 1. [Description](#description)
-2. [Features](#features)
-3. [Project Structure](#project-structure)
+2. [Project Structure](#project-structure)
+3. [Features](#features)
 4. [Installation](#installation)
 5. [Usage](#usage)
 6. [Technologies Used](#technologies-used)
-7. [Contributing](#contributing)
-8. [License](#license)
-9. [Contact](#contact)
 
 ## Project Structure
 
@@ -150,7 +147,7 @@ src/
 
 1. Clone the repository:
    ```
-   git clone https://github.com/yourusername/fashion-for-all.git
+   git clone https://github.com/Mohammed-Shaaban-Ali/ITI-Final-Project
    ```
 2. Navigate to the project directory:
    ```
@@ -173,24 +170,8 @@ src/
 
 - React.js
 - CSS3
-- [Add any other technologies, libraries, or frameworks used]
-
-## Contributing
-
-We welcome contributions to Fashion for All! Please follow these steps:
-
-1. Fork the repository
-2. Create a new branch: `git checkout -b feature/your-feature-name`
-3. Make your changes and commit them: `git commit -m 'Add some feature'`
-4. Push to the branch: `git push origin feature/your-feature-name`
-5. Submit a pull request
-
-## License
-
-[Specify the license under which your project is released]
-
-## Contact
-
-Mohamed Shaaban - [Your Email]
-
-Project Link: [https://github.com/yourusername/fashion-for-all](https://github.com/yourusername/fashion-for-all)
+- react-router-dom
+- axios
+- react-hot-toast
+- react-icons
+- react-image-magnifiers
