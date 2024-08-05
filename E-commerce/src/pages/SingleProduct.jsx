@@ -1,5 +1,5 @@
 import React, { useEffect } from "react";
-import Product from "../components/Products/Product/Product";
+import ProductCompont from "../components/Products/SingleProduct/SingleProduct";
 
 const ProductDetail = () => {
   useEffect(() => {
@@ -7,7 +7,7 @@ const ProductDetail = () => {
   }, []);
   return (
     <>
-      <Product />
+      <ProductCompont />
     </>
   );
 };

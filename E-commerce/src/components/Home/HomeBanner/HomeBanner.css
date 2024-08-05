@@ -1,0 +1,57 @@
+.banner {
+  position: relative;
+  width: 100%;
+  max-width: 1100px;
+  margin: -40px auto;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.contant {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 1.5rem;
+  background-color: #ebfaff;
+  border-radius: 16px;
+  padding: 2rem;
+  text-align: center;
+}
+
+.contant h4 {
+  font-weight: 400;
+  font-size: 1.5rem;
+}
+
+.contant h4 span {
+  font-weight: 800;
+  color: var(--main-color);
+  font-size: 1.75rem;
+}
+
+.contant img {
+  width: 80%;
+  max-width: 600px;
+}
+
+@media (max-width: 768px) {
+  .banner {
+    padding: 1rem;
+  }
+
+  .contant {
+    padding: 1rem;
+  }
+
+  .contant h4 {
+    font-size: 1.25rem;
+  }
+
+  .contant h4 span {
+    font-size: 1.5rem;
+  }
+
+  .contant img {
+    width: 90%;
+  }
+}

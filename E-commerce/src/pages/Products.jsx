@@ -1,9 +1,8 @@
 import { Link } from "react-router-dom";
-import bander from "../assets/Banner.svg";
-import PageDirection from "../components/Products/Page direction/PageDirection";
-import MainProducts from "../components/Products/Products Featured/MِِِAinProducts";
 import { useEffect } from "react";
-
+import PageDirection from "../components/Products/PageDirection/PageDirection";
+import ProductsConponts from "../components/Products/Products/Products";
+import bander from "../assets/Banner.svg";
 const Products = () => {
   useEffect(() => {
     window.scrollTo(0, 0);
@@ -22,7 +21,7 @@ const Products = () => {
         </div>
         <img src={bander} alt=" bander" />
       </div>
-      <MainProducts />
+      <ProductsConponts />
     </>
   );
 };

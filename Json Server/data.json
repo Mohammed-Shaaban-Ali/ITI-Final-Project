@@ -112,19 +112,6 @@
         "https://i.ibb.co/wy31qqL/9-3.webp"
       ],
       "id": "ecbd"
-    },
-    {
-      "id": "494c",
-      "name": "boot for female",
-      "price": "333",
-      "gender": "Female",
-      "quantity": "22",
-      "age": "Adult",
-      "images": [
-        "https://i.ibb.co/YB3XSPm/11-1.jpg",
-        "https://i.ibb.co/TmQxYrW/11-2.jpg",
-        "https://i.ibb.co/9gZhryP/11-3.jpg"
-      ]
     }
   ]
 }

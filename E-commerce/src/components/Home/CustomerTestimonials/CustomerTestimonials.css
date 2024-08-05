@@ -1,0 +1,161 @@
+.section-container {
+  background-color: #f8fafc;
+  padding-top: 5rem;
+  padding-bottom: 5rem;
+}
+
+.section-container-sm {
+  padding-top: 8rem;
+  padding-bottom: 8rem;
+}
+
+.inner-container {
+  margin-left: auto;
+  margin-right: auto;
+  max-width: 80rem;
+  padding-left: 1rem;
+  padding-right: 1rem;
+}
+
+.inner-container-sm {
+  padding-left: 1.5rem;
+  padding-right: 1.5rem;
+}
+
+.inner-container-lg {
+  padding-left: 2rem;
+  padding-right: 2rem;
+}
+
+.text-center {
+  text-align: center;
+}
+
+.heading {
+  font-size: 1.875rem;
+  letter-spacing: -0.02em;
+  color: #0f172a;
+}
+
+.heading-sm {
+  font-size: 2.25rem;
+}
+
+.list-container {
+  margin-top: 4rem;
+  margin-left: auto;
+  margin-right: auto;
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 1.5rem;
+  max-width: 40rem;
+  font-family: serif;
+}
+
+.list-container-sm {
+  gap: 2rem;
+}
+
+.list-container-lg {
+  margin-top: 5rem;
+  max-width: none;
+  grid-template-columns: repeat(3, 1fr);
+}
+
+.flex-col {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+
+.flex-col-sm {
+  gap: 2rem;
+}
+
+.figure {
+  position: relative;
+  border-radius: 1rem;
+  background-color: #ffffff;
+  padding: 1.5rem;
+  box-shadow: 0 10px 15px rgba(15, 23, 42, 0.1);
+}
+
+.quote {
+  font-size: 1.125rem;
+  letter-spacing: -0.02em;
+  color: rgb(95, 95, 95);
+  font-weight: 500;
+  font-family: "Times New Roman", Times, serif;
+}
+
+.figcaption {
+  position: relative;
+  margin-top: 1.5rem;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  border-top: 1px solid #e2e8f0;
+  padding-top: 1.5rem;
+}
+
+.name {
+  font-family: "YourDisplayFont", sans-serif;
+  font-size: 1rem;
+  color: #0f172a;
+}
+
+.image-container {
+  overflow: hidden;
+  border-radius: 9999px;
+  background-color: #f8fafc;
+}
+
+.image {
+  height: 3.5rem;
+  width: 3.5rem;
+  object-fit: cover;
+  color: transparent;
+}
+
+@media (max-width: 768px) {
+  .section-container {
+    padding-top: 6rem;
+    padding-bottom: 6rem;
+  }
+
+  .heading {
+    font-size: 1.5rem;
+  }
+
+  .list-container {
+    grid-template-columns: 1fr;
+  }
+
+  .card-what {
+    flex-direction: column;
+  }
+
+  .image {
+    width: 3rem;
+    height: 3rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .heading {
+    font-size: 1.25rem;
+  }
+
+  .list-container {
+    gap: 1rem;
+  }
+
+  .figure {
+    padding: 1rem;
+  }
+
+  .image {
+    width: 2.5rem;
+    height: 2.5rem;
+  }
+}

@@ -1,0 +1,19 @@
+.pageDirection {
+  display: flex;
+  align-items: flex-start;
+  justify-content: flex-start;
+  gap: 12px;
+  margin-bottom: 32px;
+  padding: 32px 16px;
+  background-color: #e3e3ff6f;
+  width: fit-content;
+  border-radius: 8px;
+  text-decoration: none;
+  font-weight: 800;
+  color: #bababa;
+}
+
+.pageDirection .activeDescription {
+  color: var(--main-color);
+  text-decoration: none;
+}

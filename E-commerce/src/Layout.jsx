@@ -1,9 +1,9 @@
-import React from "react";
 import { Outlet } from "react-router-dom";
-import Footer from "./components/Footer/Footer";
-import Navbar from "./components/navbar/Navbar";
-import Subscription from "./components/Home/Subscription/Subscription";
-import Form from "./pages/Form";
+
+import UserLoginForm from "./components/Form/UserLoginForm";
+import NewsletterSubscription from "./components/Home/NewsletterSubscription/NewsletterSubscription";
+import MainNavbar from "./components/MainNavbar/MainNavbar";
+import MainFooter from "./components/MainFooter/MainFooter";
 export default function Layout() {
   // localStorage
   let name = localStorage.getItem("name");
@@ -12,14 +12,14 @@ export default function Layout() {
     <>
       {name ? (
         <>
-          <Navbar />
+          <MainNavbar />
           <Outlet />
-          <Subscription />
-          <Footer />
+          <NewsletterSubscription />
+          <MainFooter />
         </>
       ) : (
         <>
-          <Form />
+          <UserLoginForm />
         </>
       )}
     </>

@@ -8,6 +8,74 @@ Welcome to "Fashion for All" - an e-commerce platform designed to offer a wide r
 
 "Fashion for All" is a user-friendly e-commerce website that enables users to browse and purchase fashion items easily. The platform offers a seamless shopping experience with features like product filtering, pagination, and personalized user accounts.
 
+src/
+│
+├── components/
+│ ├── MainFooter/
+│ │ ├── MainFooter.jsx
+│ │ └── MainFooter.css
+│ │
+│ ├── Authentication/
+│ │ ├── UserLoginForm.jsx
+│ │ └── UserLoginForm.css
+│ │
+│ ├── Home/
+│ │ ├── HomeBanner/
+│ │ │ ├── HomeBanner.jsx
+│ │ │ └── HomeBanner.css
+│ │ ├── HomeFAQ/
+│ │ │ ├── HomeFAQ.jsx
+│ │ │ └── HomeFAQ.css
+│ │ ├── HomeHeroSection/
+│ │ │ ├── HomeHeroSection.jsx
+│ │ │ └── HomeHeroSection.css
+│ │ ├── CustomerTestimonials/
+│ │ │ ├── CustomerTestimonials.jsx
+│ │ │ └── CustomerTestimonials.css
+│ │ ├── NewsletterSubscription/
+│ │ │ ├── NewsletterSubscription.jsx
+│ │ │ └── NewsletterSubscription.css
+│ │ ├── OurServices/
+│ │ │ ├── OurServices.jsx
+│ │ │ └── OurServices.css
+│ │ └── ...
+│ │
+│ ├── MainNavbar/
+│ │ ├── MainNavbar.jsx
+│ │ └── MainNavbar.css
+│ │
+│ └── Products/
+│ ├── PageNavigation/
+│ │ ├── PageNavigation.jsx
+│ │ └── PageNavigation.css
+│ ├── ProductList/
+│ │ ├── ProductList.jsx
+│ │ └── ProductList.css
+│ ├── ProductDetails/
+│ │ ├── ProductDetails.jsx
+│ │ └── ProductDetails.css
+│ ├── ProductImageSlider/
+│ │ ├── ProductImageSlider.jsx
+│ │ └── ProductImageSlider.css
+│ ├── ProductEditForm/
+│ │ ├── ProductEditForm.jsx
+│ │ └── ProductEditForm.css
+│ ├── FeaturedProducts/
+│ │ ├── FeaturedProducts.jsx
+│ │ ├── FeaturedProducts.css
+│ │ ├── FeaturedProductsFilter.jsx
+│ │ └── FeaturedProductsFilter.css
+│ └── ...
+│
+├── pages/
+│ ├── Home.jsx
+│ ├── NotFound.jsx
+│ ├── ProductListPage.jsx
+│ ├── ProductEditPage.jsx
+│ └── ProductDetailsPage.jsx
+│
+└── assets/
+
 ## Features
 
 - **User Authentication:**

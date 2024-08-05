@@ -1,0 +1,158 @@
+.footer-section {
+  margin-top: 20px;
+  padding: 20px 0;
+  background-color: #f9fafb;
+}
+
+.grid-container {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+  justify-content: space-between;
+}
+
+.logo-section {
+  flex-basis: 100%;
+  text-align: center;
+}
+
+.description {
+  font-size: 14px;
+  color: #6b7280;
+  margin-bottom: 20px;
+}
+
+.live-chat-button {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 10px 20px;
+  background-color: #2563eb;
+  color: #ffffff;
+  text-decoration: none;
+  border-radius: 5px;
+  font-weight: 500;
+  transition: background-color 0.3s;
+}
+
+.live-chat-button:hover {
+  background-color: #1e40af;
+}
+
+.chat-icon {
+  width: 20px;
+  height: 20px;
+  margin-right: 8px;
+}
+
+.links-section {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  width: 100%;
+}
+
+.links-column {
+  flex-basis: 24%;
+  margin-bottom: 20px;
+}
+
+.links-title {
+  font-size: 16px;
+  font-weight: 500;
+  margin-bottom: 10px;
+}
+
+.links-list {
+  list-style: none;
+  padding: 0;
+}
+
+.link-item {
+  color: #374151;
+  text-decoration: none;
+  font-size: 14px;
+  display: block;
+  margin-bottom: 6px;
+  transition: color 0.3s;
+}
+
+.link-item:hover {
+  color: #2563eb;
+}
+
+.divider {
+  border: none;
+  border-top: 1px solid #e5e7eb;
+  margin: 40px 0;
+}
+
+.footer-bottom {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+}
+
+.copyright {
+  font-size: 14px;
+  color: #6b7280;
+  margin-bottom: 20px;
+}
+
+.social-links {
+  display: flex;
+  list-style: none;
+  padding: 0;
+}
+
+.social-link {
+  margin-right: 10px;
+  color: #374151;
+  transition: color 0.3s;
+}
+
+.social-link:hover {
+  color: #2563eb;
+}
+
+.social-icon {
+  width: 20px;
+  height: 20px;
+}
+
+/* Media Queries for Responsiveness */
+
+@media (max-width: 768px) {
+  .links-column {
+    flex-basis: 48%; /* Adjusted column width for medium screens */
+  }
+}
+
+@media (max-width: 480px) {
+  .grid-container {
+    flex-direction: column; /* Stack all sections vertically on small screens */
+    align-items: center;
+  }
+
+  .logo-section {
+    text-align: center;
+    margin-bottom: 20px;
+  }
+
+  .links-column {
+    flex-basis: 100%; /* Full width for each column on small screens */
+    text-align: center;
+  }
+
+  .footer-bottom {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .social-links {
+    justify-content: center; /* Center social links */
+    margin-bottom: 20px;
+  }
+}

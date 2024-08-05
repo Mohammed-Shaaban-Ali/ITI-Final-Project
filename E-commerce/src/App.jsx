@@ -1,3 +1,4 @@
+import React, { lazy, Suspense } from "react";
 import {
   createBrowserRouter,
   createRoutesFromElements,
@@ -6,10 +7,11 @@ import {
 } from "react-router-dom";
 import Layout from "./Layout";
 import Home from "./pages/Home";
-import Products from "./pages/Products";
 import NotFound from "./pages/NotFound";
-import SingleProduct from "./pages/SingleProduct";
-import ProductForm from "./pages/ProductForm";
+
+const Products = lazy(() => import("./pages/Products"));
+const SingleProduct = lazy(() => import("./pages/SingleProduct"));
+const ProductForm = lazy(() => import("./pages/ProductForm"));
 
 const App = () => {
   const router = createBrowserRouter(
@@ -19,31 +21,27 @@ const App = () => {
           <Route index element={<Home />} />
           <Route
             path="products"
-            element={<Products />}
-            // loader={({ request }) =>
-            //   fetch("/api/dashboard.json", {
-            //     signal: request.signal,
-            //   })
-            // }
+            element={
+              <Suspense fallback={<div>Loading...</div>}>
+                <Products />
+              </Suspense>
+            }
           />
-
           <Route
             path="products/:id"
-            element={<SingleProduct />}
-            // loader={({ request }) =>
-            //   fetch("/api/dashboard.json", {
-            //     signal: request.signal,
-            //   })
-            // }
+            element={
+              <Suspense fallback={<div>Loading...</div>}>
+                <SingleProduct />
+              </Suspense>
+            }
           />
           <Route
             path="products/:id/edit"
-            element={<ProductForm />}
-            // loader={({ request }) =>
-            //   fetch("/api/dashboard.json", {
-            //     signal: request.signal,
-            //   })
-            // }
+            element={
+              <Suspense fallback={<div>Loading...</div>}>
+                <ProductForm />
+              </Suspense>
+            }
           />
         </Route>
         <Route path="*" element={<NotFound />} />

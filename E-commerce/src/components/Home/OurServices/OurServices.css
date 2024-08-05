@@ -1,0 +1,154 @@
+/* Base styles */
+.container-bander {
+  width: 100%;
+  max-width: 1300px;
+  margin: 80px auto;
+  padding: 0 1rem; /* Padding for smaller screens */
+}
+
+.container-bander img {
+  width: 100%;
+  height: auto; /* Maintain aspect ratio */
+}
+
+.title {
+  text-align: center;
+  font-size: 2.5rem;
+  margin: 40px 0;
+}
+
+.circle {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 20px; /* Adjust as needed */
+}
+
+.circle > img {
+  width: 400px;
+  height: auto;
+  z-index: -1;
+  animation: rotateScale 17s linear infinite;
+}
+@keyframes rotateScale {
+  0%,
+  100% {
+    transform: rotate(0deg) scale(1) translate(0, 0);
+  }
+  50% {
+    transform: rotate(180deg) scale(1.2) translate(100px, 10px);
+  }
+}
+.whatWeDo {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 48px;
+  flex-direction: column;
+  background-color: white;
+  box-shadow: 1px 1px 8px #ccc;
+  padding: 3rem;
+  border-radius: 1rem;
+  margin: 0 auto;
+  max-width: 1000px;
+}
+
+.card1,
+.card2 {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  width: 1000px;
+  gap: 32px;
+  padding: 0 1.5rem;
+}
+
+.card1 {
+  padding-bottom: 48px;
+  border-bottom: 1px solid #ccc;
+}
+
+.card-what {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  width: 45%; /* Adjust width for cards */
+}
+
+.card-text {
+  display: flex;
+  align-items: flex-start;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.card-what img {
+  width: 64px; /* Adjust size of icons */
+  height: auto;
+}
+
+.card-what p {
+  color: #797979;
+  font-weight: 400;
+  font-size: 14px;
+}
+
+/* Responsive styles */
+@media (max-width: 768px) {
+  .container-bander {
+    margin-top: 30px;
+    padding: 0 0.5rem;
+  }
+
+  .whatWeDo {
+    width: 100%;
+  }
+  .card1,
+  .card2 {
+    width: 100%;
+    margin: auto;
+  }
+  .title {
+    font-size: 2.5rem;
+  }
+  .circle > img {
+    display: none;
+  }
+  .card-what {
+    width: 100%;
+  }
+  .circle {
+    flex-direction: column; /* Stack circles vertically */
+    margin-top: 0; /* Adjust top margin */
+  }
+
+  .whatWeDo {
+    flex-direction: column; /* Column direction for smaller screens */
+    padding: 1.5rem;
+    gap: 1rem;
+  }
+
+  .card1,
+  .card2 {
+    flex-direction: column; /* Stack cards vertically */
+  }
+
+  .card-what img {
+    width: 48px; /* Smaller image size */
+  }
+}
+
+@media (max-width: 480px) {
+  .title {
+    font-size: 2.5rem;
+    margin-bottom: 1rem;
+  }
+
+  .card-what img {
+    width: 40px; /* Further reduced image size */
+  }
+
+  .card-text {
+    gap: 0.25rem; /* Reduced gap */
+  }
+}

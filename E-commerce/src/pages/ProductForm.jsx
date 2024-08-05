@@ -3,15 +3,14 @@
 // import axios from "axios";
 
 import { useEffect } from "react";
-import ProductsAddUpdateForm from "../components/Products/Product Form/ProductForm";
-
+import ProductFormCompont from "../components/Products/ProductForm/ProductForm";
 function ProductForm() {
   useEffect(() => {
     window.scrollTo(0, 0);
   }, []);
   return (
     <>
-      <ProductsAddUpdateForm />
+      <ProductFormCompont />
     </>
   );
 }
