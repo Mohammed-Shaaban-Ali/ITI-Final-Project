@@ -35,13 +35,18 @@ export default function ProductCard({ product, onDelete }) {
               Age: <strong>{product.age}</strong>
             </p>
           </div>
-          <div className="price">
-            Price:{" "}
-            <strong>
-              {" "}
-              <span>$</span>
-              {product.price.toLocaleString()}
-            </strong>
+          <div className="gene-age">
+            <p>
+              Price:{" "}
+              <strong>
+                <span>$</span>
+                {product.price.toLocaleString()}
+              </strong>
+            </p>
+            <div className="line"></div>
+            <p>
+              Quantity: <strong>{product.quantity}</strong>
+            </p>
           </div>
         </div>
         <div className="btns">

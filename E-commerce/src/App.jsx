@@ -8,6 +8,7 @@ import {
 import Layout from "./Layout";
 import Home from "./pages/Home";
 import NotFound from "./pages/NotFound";
+import LoadingPage from "./pages/LoadingPage";
 
 const Products = lazy(() => import("./pages/Products"));
 const SingleProduct = lazy(() => import("./pages/SingleProduct"));
@@ -22,7 +23,7 @@ const App = () => {
           <Route
             path="products"
             element={
-              <Suspense fallback={<div>Loading...</div>}>
+              <Suspense fallback={<LoadingPage />}>
                 <Products />
               </Suspense>
             }
@@ -30,7 +31,7 @@ const App = () => {
           <Route
             path="products/:id"
             element={
-              <Suspense fallback={<div>Loading...</div>}>
+              <Suspense fallback={<LoadingPage />}>
                 <SingleProduct />
               </Suspense>
             }
@@ -38,7 +39,7 @@ const App = () => {
           <Route
             path="products/:id/edit"
             element={
-              <Suspense fallback={<div>Loading...</div>}>
+              <Suspense fallback={<LoadingPage />}>
                 <ProductForm />
               </Suspense>
             }
