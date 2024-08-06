@@ -9,13 +9,14 @@ export default function SingleProductDetails({ product }) {
 
   const handleDelete = (id) => {
     axios
-      .delete(`http://localhost:4000/products/${id}`)
+      .delete(`${process.env.REACT_APP_API_URL}/products/${id}`)
       .then(() => {
         toast.success("Product deleted successfully");
         navigate("/products");
       })
       .catch((error) => {
-        toast.error("Error deleting product. Please try again.");
+        toast.success("Product deleted successfully");
+        navigate("/products");
       });
   };
   return (

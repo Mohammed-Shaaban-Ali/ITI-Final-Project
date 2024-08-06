@@ -1,0 +1,75 @@
+.skeleton-cards {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
+  gap: 20px;
+  align-items: center;
+  justify-content: center;
+}
+.skeleton-card {
+  padding: 1rem;
+  border-radius: 0.375rem;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  /* width: 15rem; */
+  background-color: #f9fafb;
+  animation: pulse 1.5s infinite;
+}
+
+.skeleton-card-avatar {
+  flex-shrink: 0;
+  width: 100%;
+  height: 8rem;
+  border-radius: 8px;
+  background-color: #d1d5db;
+}
+
+.skeleton-card-content {
+  margin-top: 1rem;
+  gap: 1rem;
+}
+.skeleton-card-description {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+  margin-bottom: 1rem;
+}
+.skeleton-card-line-group {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+  width: 100%;
+}
+.skeleton-card-line,
+.skeleton-card-button,
+.skeleton-card-title {
+  width: 100%;
+  height: 1rem;
+  border-radius: 0.375rem;
+  background-color: #d1d5db;
+}
+.skeleton-card-title {
+  margin-bottom: 0.75rem;
+  height: 1.2rem;
+}
+.skeleton-card-buttons {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+  width: 100%;
+}
+.skeleton-card-button {
+  margin-top: 0.5rem;
+  height: 2rem;
+}
+@keyframes pulse {
+  0%,
+  100% {
+    opacity: 1;
+  }
+  50% {
+    opacity: 0.5;
+  }
+}

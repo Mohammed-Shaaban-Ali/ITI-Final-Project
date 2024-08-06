@@ -11,11 +11,13 @@ import "./Products.css";
 import axios from "axios";
 import toast from "react-hot-toast";
 import ProductsFilter from "./ProductsFilter";
-import LoadingPage from "../../../pages/LoadingPage";
+import LoadingProductCard from "../../Loading/LoadingProductCard";
 const ProductsList = lazy(() => import("./ProductsList"));
 
 const Products = () => {
   const [products, setProducts] = useState([]);
+  const [loading, setLoading] = useState(true);
+
   const [filters, setFilters] = useState({
     gender: { Male: true, Female: true },
     ageGroup: { Adult: true, Children: true },
@@ -23,22 +25,24 @@ const Products = () => {
   });
 
   // Fetch products from API
-  const PORT = process.env.REACT_APP_API_URL;
 
   useEffect(() => {
     const fetchProducts = async () => {
       try {
-        const response = await axios.get(`${PORT}/products`);
+        const response = await axios.get(
+          `${process.env.REACT_APP_API_URL}/products`
+        );
         setProducts(response.data.reverse());
       } catch (error) {
         console.log(error);
         toast.error("Failed to fetch products. Please try again.");
+      } finally {
+        setLoading(false);
       }
     };
 
     fetchProducts();
   }, []);
-
   // Handle filter changes
   const handleFilterChange = (category, item) => {
     setFilters((prev) => ({
@@ -149,11 +153,12 @@ const Products = () => {
           handlePriceChange={handlePriceChange}
         />
 
-        <Suspense fallback={<LoadingPage />}>
+        <Suspense fallback={<LoadingProductCard />}>
           <ProductsList
             currentItems={currentItems}
             RenderPageNumbers={renderPageNumbers}
             productRef={productRef}
+            loading={loading}
           />
         </Suspense>
       </div>

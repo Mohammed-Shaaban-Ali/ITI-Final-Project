@@ -1,5 +1,5 @@
 import React, { useState, useCallback } from "react";
-// import { GlassMagnifier } from "react-image-magnifiers"; // We'll define our styles in this file
+import { ImageMagnifier } from "../../../tools/ImageMagnifier";
 
 export default function ImageSlider({ product }) {
   const images = product?.images || [];
@@ -11,21 +11,10 @@ export default function ImageSlider({ product }) {
     setActiveIndex(index);
   }, []);
 
-  if (images.length === 0) {
-    return <div className="no-images">No images available</div>;
-  }
-
   return (
     <div className="image-slider">
       <div className="main-image-container">
-        {/* <GlassMagnifier
-          imageSrc={mainImage || images[0]}
-          imageAlt={`${product?.name || "Product"} - Image ${activeIndex + 1}`}
-          largeImageSrc={mainImage || images[0]}
-          magnifierBorderSize={1}
-          magnifierSize="50%"
-          className="main-image"
-        /> */}
+        <ImageMagnifier src={mainImage || images[0]} />
       </div>
       <div className="thumbnail-container">
         {images.map((thumb, index) => (
