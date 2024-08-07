@@ -1,24 +1,8 @@
-import axios from "axios";
 import React from "react";
 import { AiFillEdit } from "react-icons/ai";
 import { RiDeleteBin3Fill } from "react-icons/ri";
-import { Link, useNavigate } from "react-router-dom";
-import toast from "react-hot-toast";
-export default function SingleProductDetails({ product }) {
-  const navigate = useNavigate();
-
-  const handleDelete = (id) => {
-    axios
-      .delete(`${process.env.REACT_APP_API_URL}/products/${id}`)
-      .then(() => {
-        toast.success("Product deleted successfully");
-        navigate("/products");
-      })
-      .catch((error) => {
-        toast.success("Product deleted successfully");
-        navigate("/products");
-      });
-  };
+import { Link } from "react-router-dom";
+export default function SingleProductDetails({ product, handleDelete }) {
   return (
     <div className="product-details">
       <div className="store-number">Store Number: 56hp90</div>

@@ -12,7 +12,7 @@ const ProductForm = () => {
     age: "",
     images: [],
   });
-  console.log(product);
+
   const [error, setError] = useState("");
   const [isLoading, setIsLoading] = useState(false); // State for loading indicator
   const navigate = useNavigate();
@@ -52,16 +52,10 @@ const ProductForm = () => {
     };
     try {
       if (id == 0) {
-        await axios.post(
-          `${process.env.REACT_APP_API_URL}/products`,
-          newProduct
-        );
+        await axios.post(`http://localhost:4000/products`, newProduct);
         toast.success("Product added successfully!");
       } else {
-        await axios.put(
-          `${process.env.REACT_APP_API_URL}/products/${id}`,
-          newProduct
-        );
+        await axios.put(`http://localhost:4000/products/${id}`, newProduct);
         toast.success("Product updated successfully!");
       }
       setProduct({
@@ -72,9 +66,9 @@ const ProductForm = () => {
         age: "",
         images: [],
       });
-    } catch (error) {
       navigate("/products");
-      toast.success("Product updated successfully!");
+    } catch (error) {
+      toast.error("Error adding product. Please try again.");
     }
   };
 
@@ -106,10 +100,9 @@ const ProductForm = () => {
   useEffect(() => {
     if (id != 0) {
       axios
-        .get(`${process.env.REACT_APP_API_URL}/products/${id}`)
+        .get(`http://localhost:4000/products/${id}`)
         .then(function (response) {
           setProduct(response.data);
-          // console.log(response.data);
         })
         .catch(function (error) {
           toast.error(error);

@@ -1,5 +1,10 @@
-import React, { useEffect } from "react";
-import ProductCompont from "../components/Products/SingleProduct/SingleProduct";
+import React, { lazy, Suspense, useEffect } from "react";
+
+import LoadingPage from "./LoadingPage";
+
+const ProductCompont = lazy(() =>
+  import("../components/Products/SingleProduct/SingleProduct")
+);
 
 const ProductDetail = () => {
   useEffect(() => {
@@ -7,7 +12,10 @@ const ProductDetail = () => {
   }, []);
   return (
     <>
-      <ProductCompont />
+      <Suspense fallback={<LoadingPage />}>
+        <ProductCompont />
+        {/* <LoadingPage />{" "} */}
+      </Suspense>
     </>
   );
 };
